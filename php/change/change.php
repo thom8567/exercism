@@ -1,6 +1,8 @@
 <?php declare(strict_types=1);
 function findFewestCoins(array $coinSet, int $changeToGive) : array
 {
+    $changeGiven = [];
+
     if (in_array($changeToGive, $coinSet)) {
         return [$changeToGive];
     }
@@ -14,8 +16,12 @@ function findFewestCoins(array $coinSet, int $changeToGive) : array
         throw new \InvalidArgumentException('No coins small enough to make change');
     }
 
-    while ($changeToGive > 0) {
-        fffff
-    }
+    $coinSet = array_reverse($coinSet);
 
+    foreach ($coinSet as $coin) {
+        if ($coin < $changeToGive) {
+            $temp = $changeToGive % $coin;
+
+        }
+    }
 }
