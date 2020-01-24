@@ -79,7 +79,7 @@ class ClockTest extends PHPUnit\Framework\TestCase
     {
         $clock = new Clock(10);
 
-        $clock = $clock->sub(90);
+        $clock = $clock->subtract(90);
 
         $this->assertEquals('08:30', $clock->__toString());
     }
@@ -88,7 +88,7 @@ class ClockTest extends PHPUnit\Framework\TestCase
     {
         $clock = new Clock(6, 15);
 
-        $clock = $clock->sub(160);
+        $clock = $clock->subtract(160);
 
         $this->assertEquals('03:35', $clock->__toString());
     }
@@ -106,7 +106,7 @@ class ClockTest extends PHPUnit\Framework\TestCase
     {
         $clock = new Clock(2, 20);
 
-        $clock = $clock->sub(3000);
+        $clock = $clock->subtract(3000);
 
         $this->assertEquals('00:20', $clock->__toString());
     }
@@ -115,7 +115,7 @@ class ClockTest extends PHPUnit\Framework\TestCase
     {
         $clock = new Clock(0, 30);
 
-        $clock = $clock->sub(60);
+        $clock = $clock->subtract(60);
 
         $this->assertEquals('23:30', $clock->__toString());
     }
@@ -133,7 +133,7 @@ class ClockTest extends PHPUnit\Framework\TestCase
     {
         $clock = new Clock(5, 32);
 
-        $clock = $clock->sub(25 * 60);
+        $clock = $clock->subtract(25 * 60);
 
         $this->assertEquals('04:32', $clock->__toString());
     }
