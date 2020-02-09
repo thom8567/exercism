@@ -7,16 +7,16 @@ function recognize(array $input) : string
 
 function assertValidInput(array $input) : void
 {
-    if (count($input) < 3) {
+    if (3 > count($input)) {
         throw new InvalidArgumentException();
     }
 
     foreach ($input as $row) {
-        if (0 === 3 % strlen($row)) {
-            echo 'Failed on row length';
-            throw new InvalidArgumentException();
+        if (0 !== 3 % strlen($row)) {
+
         }
     }
+
 }
 
 function convertCharacterToString(array $character) : string
